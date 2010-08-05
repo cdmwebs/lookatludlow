@@ -99,7 +99,7 @@ a img {
 
 /* line 20 */
 body {
-  background: #336699 url("/images/bg.gif") repeat;
+  background: #336699 url("/images/bg.gif") repeat fixed;
   width: 790px;
   margin: 0 auto;
   overflow: hidden;

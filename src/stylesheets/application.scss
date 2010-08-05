@@ -18,7 +18,7 @@ $blueprint_grid_width: 40px;
   font-style: normal; }
 
 body {
-  background: #369 url('/images/bg.gif') repeat;
+  background: #369 url('/images/bg.gif') repeat fixed;
   @include container;
   overflow: auto;
   #header, #slideshow, #footer {
