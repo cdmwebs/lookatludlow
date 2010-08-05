@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %title Look at Ludlow!
+    %link{:href => "/images/favicon.ico", :rel => "icon", :type => "image/x-icon"}
+    = javascripts 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', 'jquery.cycle.min'
+    :javascript
+      WebFontConfig = {
+        google: { families: [ 'Vollkorn', 'Molengo' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();      
+      $(document).ready(function() {
+        $('#slideshow').cycle({fx: 'scrollLeft'});
+      });
+    %link{:href => 'http://fonts.googleapis.com/css?family=Vollkorn:regular:bold', :rel => 'stylesheet', :type => 'text/stylesheet'}
+    = stylesheets
+  %body
+    #header
+      %h1
+        = link "Look at Ludlow!", "/index.html"
+    - if current_page == '/index.html'
+      #slideshow
+        - Dir.glob('site/images/rotate/*').each do |img_file|
+          = img "/images/rotate/#{File.basename(img_file)}"
+    #content
+      = yield
+    #footer
+      %p
+        Look at Ludlow is paid for by citizens of Ludlow.
+        = link "Contact Us"
+        for more information.
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-636525-17']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();      

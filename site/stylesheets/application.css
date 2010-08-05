@@ -1,0 +1,206 @@
+/* line 4, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+@font-face {
+  font-family: "ChunkFiveRegular";
+  src: url("fonts/chunkfive/Chunkfive-webfont.eot");
+  src: local("☺"), url("fonts/chunkfive/Chunkfive-webfont.woff") format("woff"), url("fonts/chunkfive/Chunkfive-webfont.ttf") format("truetype"), url("fonts/chunkfive/Chunkfive-webfont.svg#webfontb5K2fJwj") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JunctionRegular";
+  src: url("fonts/junction/Junction-webfont.eot");
+  src: local("☺"), url("fonts/junction/Junction-webfont.woff") format("woff"), url("fonts/junction/Junction-webfont.ttf") format("truetype"), url("fonts/junction/Junction-webfont.svg#webfontb5K2fJwj") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 20 */
+body {
+  background: #336699 url("/images/bg.gif") repeat;
+  width: 790px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  overflow: auto;
+}
+/* line 24 */
+body #header, body #slideshow, body #footer {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+}
+/* line 138, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #header, * html body #slideshow, * html body #footer {
+  overflow-x: hidden;
+}
+/* line 26 */
+body #sidebar {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 290px;
+}
+/* line 138, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #sidebar {
+  overflow-x: hidden;
+}
+/* line 28 */
+body #content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 690px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* line 138, /Users/cdmwebs/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #content {
+  overflow-x: hidden;
+}
+/* line 34 */
+body #header h1 {
+  color: green;
+  font: 60px/68px "ChunkFiveRegular", Georgia, serif;
+  text-shadow: 2px 2px 2px #888;
+  letter-spacing: -3px;
+  margin: 20px 0;
+}
+/* line 40 */
+body #header h1 a {
+  color: green;
+  text-decoration: none;
+}
+/* line 46 */
+body #slideshow {
+  margin-bottom: 2em;
+}
+/* line 48 */
+body #slideshow img {
+  width: 760px;
+  height: 300px;
+  padding: 15px;
+  background-color: #fff;
+}
+/* line 54 */
+body #content {
+  background-color: #fff;
+  color: #333;
+  font-size: 120%;
+  line-height: 1.4em;
+}
+/* line 59 */
+body #content h2 {
+  font: 30px/34px "ChunkFiveRegular", Georgia, serif;
+  margin: 1em 0;
+}
+/* line 63 */
+body #content p {
+  font-family: 'Vollkorn', Arial, serif;
+  margin-bottom: 10px;
+}
+/* line 66 */
+body #content p code {
+  background: #f8f8ff;
+  border: 1px solid #cacaca;
+  color: #333333;
+  font-family: Monaco, "Courier New";
+  font-size: 13px;
+  padding: 1px 2px;
+}
+/* line 74 */
+body #footer {
+  background-color: #fff;
+  color: #666;
+  margin: 1em 0 2em 0;
+  padding: 1em 0;
+}
+/* line 79 */
+body #footer p {
+  text-align: center;
+  font-family: 'Vollkorn', Arial, serif;
+  font-size: 80%;
+}
