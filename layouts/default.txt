@@ -2,17 +2,31 @@
 extension: html
 filter:    haml
 ---
-!!!
+!!! 5
 %html
   %head
-    %title Look at Ludlow!
+    %title= @page.title
     %link{:href => "/images/favicon.ico", :rel => "icon", :type => "image/x-icon"}
+    %link{:href => '//fonts.googleapis.com/css?family=Vollkorn:regular:bold', :rel => 'stylesheet', :type => 'text/stylesheet'}
+    %link{:href => 'css/screen.css', :rel => 'stylesheet', :type => 'text/stylesheet', :media => 'screen, projector'}
+    %link{:href => 'css/print.css', :rel => 'stylesheet', :type => 'text/stylesheet', :media => 'print'}
+    /[if lte IE 6]
+      %link{:href => 'css/ie.css', :rel => 'stylesheet', :type => 'text/stylesheet', :media => 'screen, projection'}
+  %body
+    #header
+      %h1= link_to_page("Look at Ludlow!", :title => 'Look at Ludlow!')
+    = content_for(:slideshow)
+    #content
+      = @content
+    #footer
+      %p Look at Ludlow is paid for by citizens of Ludlow. #{link_to "Contact Us"} for more information.
     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'}
     %script{:src => 'javascripts/jquery.cycle.min.js'}
     :javascript
       WebFontConfig = {
         google: { families: [ 'Vollkorn', 'Molengo' ] }
       };
+
       (function() {
         var wf = document.createElement('script');
         wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
@@ -22,24 +36,11 @@ filter:    haml
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+
       $(document).ready(function() {
-        $('#slideshow').cycle({fx: 'scrollLeft'});
+        $('#slideshow').show().cycle({fx: 'scrollLeft'});
       });
-    %link{:href => 'http://fonts.googleapis.com/css?family=Vollkorn:regular:bold', :rel => 'stylesheet', :type => 'text/stylesheet'}
-    %link{:href => 'css/screen.css', :rel => 'stylesheet', :type => 'text/stylesheet'}
-  %body
-    #header
-      %h1
-        = link_to_page "Look at Ludlow!", :title => 'Home Page'
-    = content_for(:slideshow)
-    #content
-      = @content
-    #footer
-      %p
-        Look at Ludlow is paid for by citizens of Ludlow.
-        = link_to "Contact Us"
-        for more information.
-    :javascript
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-636525-17']);
       _gaq.push(['_trackPageview']);

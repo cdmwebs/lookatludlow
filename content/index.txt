@@ -1,15 +1,15 @@
 ---
-title:       Home Page
-created_at:  2008-08-02 14:06:40.000000 -06:00
+title:       Look at Ludlow!
+created_at:  2011-03-20 14:06:40.000000 -06:00
 filter:
   - erb
   - markdown
 ---
 <% content_for(:slideshow) do %>
-  <div id="slideshow">
-    <% Dir.glob('content/images/rotate/*').each do |img_file| %>
+  <div id="slideshow" style="display: none;>
+    <% Dir.glob('content/images/rotate/*').each do |img_file| -%>
       <img src="/images/rotate/<%= File.basename(img_file) %>" />
-    <% end %>
+    <% end -%>
   </div>
 <% end %>
 

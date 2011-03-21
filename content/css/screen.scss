@@ -33,8 +33,7 @@ body {
   #content {
     @include column(14);
     @include prepend(1);
-    @include append(1);
-    }
+    @include append(1); }
   #header {
     h1 {
       color: green;
@@ -44,18 +43,14 @@ body {
       margin: 20px 0;
       a {
         color: green;
-        text-decoration: none;
-      }
-    }
-  }
+        text-decoration: none; } } }
   #slideshow {
     margin-bottom: 2em;
     img {
       width: 760px;
       height: 300px;
       padding: 15px;
-      background-color: #fff; }
-  }
+      background-color: #fff; } }
   #content {
     background-color: #fff;
     color: #333;
@@ -63,8 +58,7 @@ body {
     line-height: 1.4em;
     h2 {
       font: 30px / 34px "ChunkFiveRegular", Georgia, serif;
-      margin: 1em 0;
-    }
+      margin: 1em 0; }
     p {
       font-family: 'Vollkorn', Arial, serif;
       margin-bottom: 10px;
@@ -84,7 +78,4 @@ body {
     p {
       text-align: center;
       font-family: 'Vollkorn', Arial, serif;
-      font-size: 80%;
-    }
-  }
-}
+      font-size: 80%; } } }
