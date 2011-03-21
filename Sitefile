@@ -1,0 +1,20 @@
+require 'compass'
+
+Compass.configuration do |config|
+  config.project_path = File.dirname(__FILE__)
+  config.sass_options = { :syntax => :scss }
+  config.output_style = :compressed
+end
+
+Webby.site.sass_options.update(Compass.sass_engine_options)
+
+#SITE.output_dir = '..'
+SITE.user = 'cdmwebs'
+SITE.host = 'lookatludlow.org'
+SITE.remote_dir = '/home/cdmwebs/sites/lookatludlow.org/current/public'
+SITE.rsync_args = ['-rczP', '--delete', '--exclude-from=.exclude', '--rsh=ssh']
+
+task :default => :build
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:rsync']
+# EOF
