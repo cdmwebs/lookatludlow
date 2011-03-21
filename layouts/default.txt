@@ -3,9 +3,16 @@ extension: html
 filter:    haml
 ---
 !!! 5
-%html
+%html{"xmlns:og" => "http://ogp.me/ns#", "xmlns:fb" => "https://www.facebook.com/2008/fbml"}
   %head
     %title= @page.title
+    %meta{:property => "og:title", :content => "Welcome"}
+    %meta{:property => "og:type", :content => "website"}
+    %meta{:property => "og:url", :content => "http://lookatludlow.org/"}
+    %meta{:property => "og:image", :content => "http://lookatludlow.org/images/rotate/IMG_0006.jpg"}
+    %meta{:property => "og:site_name", :content => "Look at Ludlow!"}
+    %meta{:property => "fb:admins", :content => "515610404"}
+    %meta{:property => "og:description", :content => "Ludlow, KY has a lot to offer. Come see why!"}
     %link{:href => "/images/favicon.ico", :rel => "icon", :type => "image/x-icon"}
     %link{:href => '//fonts.googleapis.com/css?family=Vollkorn:regular:bold', :rel => 'stylesheet', :type => 'text/stylesheet'}
     %link{:href => 'css/screen.css', :rel => 'stylesheet', :type => 'text/stylesheet', :media => 'screen, projector'}
@@ -17,11 +24,14 @@ filter:    haml
       %h1= link_to_page("Look at Ludlow!", :title => 'Look at Ludlow!')
     = content_for(:slideshow)
     #content
+      = content_for(:like_button)
       = @content
     #footer
       %p Look at Ludlow is paid for by citizens of Ludlow. #{link_to "Contact Us"} for more information.
     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'}
     %script{:src => 'javascripts/jquery.cycle.min.js'}
+    #fb-root
+    %script{:src => 'http://connect.facebook.net/en_US/all.js'}
     :javascript
       WebFontConfig = {
         google: { families: [ 'Vollkorn', 'Molengo' ] }
@@ -39,6 +49,13 @@ filter:    haml
 
       $(document).ready(function() {
         $('#slideshow').show().cycle({fx: 'scrollLeft'});
+      });
+
+      FB.init({
+        appId  : '202940339730752',
+        status : true, // check login status
+        cookie : true, // enable cookies to allow the server to access the session
+        xfbml  : true  // parse XFBML
       });
 
       var _gaq = _gaq || [];

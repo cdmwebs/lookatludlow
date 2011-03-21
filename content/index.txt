@@ -13,6 +13,10 @@ filter:
   </div>
 <% end %>
 
+<% content_for(:like_button) do %>
+  <fb:like href="lookatludlow.org" show_faces="true" width="650" font=""></fb:like>
+<% end %>
+
 ## Where? Ludlow?
 
 Yeah &ndash; Ludlow, Kentucky! We&#39;re ten minutes from Downtown Cincinnati, 
