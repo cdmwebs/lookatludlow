@@ -6,7 +6,7 @@ filter:    haml
 %html{"xmlns:og" => "http://ogp.me/ns#", "xmlns:fb" => "https://www.facebook.com/2008/fbml"}
   %head
     %title= @page.title
-    %meta{:property => "og:title", :content => "Welcome"}
+    %meta{:property => "og:title", :content => "Look at Ludlow"}
     %meta{:property => "og:type", :content => "website"}
     %meta{:property => "og:url", :content => "http://lookatludlow.org/"}
     %meta{:property => "og:image", :content => "http://lookatludlow.org/images/rotate/IMG_0006.jpg"}
