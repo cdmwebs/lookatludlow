@@ -1,0 +1,56 @@
+---
+title:       Home Page
+created_at:  2008-08-02 14:06:40.000000 -06:00
+filter:
+  - erb
+  - markdown
+---
+<% content_for(:slideshow) do %>
+  <div id="slideshow">
+    <% Dir.glob('content/images/rotate/*').each do |img_file| %>
+      <img src="/images/rotate/<%= File.basename(img_file) %>" />
+    <% end %>
+  </div>
+<% end %>
+
+## Where? Ludlow?
+
+Yeah &ndash; Ludlow, Kentucky! We&#39;re ten minutes from Downtown Cincinnati, 
+fifteen from the Greater Cincinnati Northern Kentucky International Airport, shopping, 
+dining, attractions, and, of course, the Yacht Club! We've got hundred year
+old houses, parks, restaurants, corner grocery stores and sidewalks for evening strolls galore.
+
+## Why Ludlow?
+
+Why not!? Ludlow was incorporated as a city in 1864. Many houses here are over
+a hundred years old. There are wide streets with established trees, sidewalks, 
+lawns, and tulips everywhere all spring.
+
+## How about houses?
+
+There are many historic homes in Ludlow in various stages of repair and a few
+in disrepair. If you&#39;re a fan of getting your hands dirty on a DIY
+remodel, come on over! If you&#39;re just looking for something to move in 
+to, we&#39;ve got those too!
+
+Houses are super affordable here, too. Typical two to four bedroom houses in
+Ludlow range from $45,000 to $120,000.
+
+## What about transportation?
+
+Glad you asked! We&#39;ve got bus service from <%= link_to "TANK", "http://www.tankbus.org/RoutesSchedules/WeeklySchedule/tabid/67/Default.aspx" %>
+via the number three route. If you&#39;re a biker, it&#39;s 4.3 miles to 4th and Vine Streets in Cincinnati. You can always drive, too.
+
+<iframe width="690" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Oak+St+%26+Adela+Ave,+Ludlow,+KY&amp;daddr=4th+St+%26+Vine+St+Cincinnati,+OH&amp;hl=en&amp;geocode=Fdp9VAIdWdX1-inPtbKSkrZBiDHnFuRA0tXrFA%3BFSieVAIdbHD2-il5vaFuULFBiDHMIveueGwllg&amp;mra=ls&amp;sll=39.09323,-84.53272&amp;sspn=0.02518,0.043473&amp;ie=UTF8&amp;t=h&amp;ll=39.09323,-84.53272&amp;spn=0.01342,0.04114&amp;output=embed">
+  <br />
+  <small>
+    <%= link_to 'View Larger Map', "http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Oak+St+%26+Adela+Ave,+Ludlow,+KY&amp;daddr=4th+St+%26+Vine+St+Cincinnati,+OH&amp;hl=en&amp;geocode=Fdp9VAIdWdX1-inPtbKSkrZBiDHnFuRA0tXrFA%3BFSieVAIdbHD2-il5vaFuULFBiDHMIveueGwllg&amp;mra=ls&amp;sll=39.09323,-84.53272&amp;sspn=0.02518,0.043473&amp;ie=UTF8&amp;t=h&amp;ll=39.09323,-84.53272&amp;spn=0.01342,0.04114&amp;output=embed", :style => "color:#0000FF;text-align:left" %>
+  </small
+</iframe>
+
+## What schools are around?
+
+Ludlow has it&#39;s own school system called 
+<%= link_to "Ludlow Independent Schools", "http://www.ludlow.k12.ky.us/" %>
+housing an elelmentary through twelfth grade students. Classes are small 
+compared to most schools in the area, allowing more student-teacher interaction.
