@@ -27,7 +27,7 @@ filter:    haml
       = content_for(:like_button)
       = @content
     #footer
-      %p Look at Ludlow is paid for by citizens of Ludlow. #{link_to "Contact Us"} for more information.
+      %p Look at Ludlow is paid for by citizens of Ludlow. #{link_to_page "Contact us", :title => 'Contact Us'} for more information.
     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'}
     %script{:src => 'javascripts/jquery.cycle.min.js'}
     #fb-root
@@ -49,6 +49,7 @@ filter:    haml
 
       $(document).ready(function() {
         $('#slideshow').show().cycle({fx: 'scrollLeft'});
+        #{content_for :javascript}
       });
 
       FB.init({
