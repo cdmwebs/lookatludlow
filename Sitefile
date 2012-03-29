@@ -6,7 +6,7 @@ Compass.configuration do |config|
   config.output_style = :compressed
 end
 
-Webby.site.sass_options.update(Compass.sass_engine_options)
+#Webby.site.sass_options.update(Compass.sass_engine_options)
 
 #SITE.output_dir = '..'
 SITE.user = 'cdmwebs'
