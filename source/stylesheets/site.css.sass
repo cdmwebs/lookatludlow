@@ -12,72 +12,80 @@ $link-visited-color: false
 $font-color:  #2a2a2a
 $font-family: sans-serif
 
-body 
+body
   font-family: $font-family
-  color: $font-color 
+  color: $font-color
+  margin: 1em auto
 
-a 
+a
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
-@font-face 
+@font-face
   font-family: "ChunkFiveRegular"
   src: url("../fonts/chunkfive/Chunkfive-webfont.eot")
   src: local("☺"), url("../fonts/chunkfive/Chunkfive-webfont.woff") format("woff"), url("../fonts/chunkfive/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/chunkfive/Chunkfive-webfont.svg#webfontb5K2fJwj") format("svg")
   font-weight: normal
-  font-style: normal 
-@font-face 
+  font-style: normal
+@font-face
   font-family: "JunctionRegular"
   src: url("fonts/junction/Junction-webfont.eot")
   src: local("☺"), url("fonts/junction/Junction-webfont.woff") format("woff"), url("fonts/junction/Junction-webfont.ttf") format("truetype"), url("fonts/junction/Junction-webfont.svg#webfontb5K2fJwj") format("svg")
   font-weight: normal
-  font-style: normal 
+  font-style: normal
 
 .container
   max-width: 790px
   margin: 0 auto
-  &.main, &.slideshow
-    background-color: #fff  
+  &.main, &.slideshow, &.footer
+    background-color: #fff
+  &.footer
+    margin-top: 2em
 
-body 
+body
   background: #369 url('/images/bg.gif') repeat fixed
-  overflow: auto
-  header 
-    h1 
+  header
+    h1
       color: green
       font: 60px/68px "ChunkFiveRegular", Georgia, serif
       text-shadow: 2px 2px 2px #888
       letter-spacing: -3px
       margin: 20px 0
-      a 
+      a
         color: green
-        text-decoration: none   
-  #slideshow 
-    margin: 2em auto
-    background: url(/images/orbit/loadinloading.gif) no-repeat center center #fff
-    img 
-      padding: 15px
-  #content 
+        text-decoration: none
+  #slideshow
+    margin-bottom: 2em
+    background: url(/images/orbit/loading.gif) no-repeat center center #fff
+    text-align: center
+    img
+      padding: 25px 0 15px 15px
+  #content
     color: #333
-    font-size: 120%
     line-height: 1.4em
     padding-top: 1em
-    h2 
+    h2
       font: 30px/34px "ChunkFiveRegular", Georgia, serif
-      margin: 1em 0 
-    p 
+      margin: 1em 0
+    p
       font-family: 'Vollkorn', Arial, serif
       margin-bottom: 10px
-      code 
+      font-size: 2rem
+      code
         background: #f8f8ff
         border: 1px solid #cacaca
         color: #333333
-        font: 
+        font:
           family: Monaco, "Courier New"
-          size: 13px 
-        padding: 1px 2px   
-  footer 
+          size: 13px
+        padding: 1px 2px
+  footer
     color: #666
-    p 
+    padding: 1em 0
+    p
       text-align: center
       font-family: 'Vollkorn', Arial, serif
-      font-size: 80%   
+      margin: 0
+
+iframe
+  margin: 1em 0
+

@@ -28,6 +28,7 @@
           - if request.path == "/" || request.path == "index.html"
             %fb:like{href: "lookatludlow.org", show_faces: "true", width: "650", font: ""}
           = yield(:content)
+    .container.footer
       .row
         %footer.columns.twelve
           %p
