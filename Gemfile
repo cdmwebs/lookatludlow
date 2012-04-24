@@ -1,6 +1,5 @@
 source :rubygems
 
-gem 'webby'
-gem 'compass'
+gem 'middleman'
 gem 'rdiscount'
 gem 'haml'
