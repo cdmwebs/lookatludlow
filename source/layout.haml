@@ -53,7 +53,10 @@
       })();
 
       $(document).ready(function() {
-        $('#slideshow').orbit({directionalNav: false});
+        $('#slideshow').orbit({
+          directionalNav: false,
+          animation: 'fade'
+        });
         #{content_for?(:javascript) ? content_for(:javascript) : nil}
       });
 
