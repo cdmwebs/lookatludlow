@@ -1,6 +1,5 @@
 source :rubygems
 
-gem 'webby'
-gem 'compass'
-gem 'rdiscount'
-gem 'haml'
+gem 'middleman'
+gem 'ZURB-foundation'
+gem 'rb-fsevent'

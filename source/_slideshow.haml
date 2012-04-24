@@ -1,0 +1,3 @@
+#slideshow
+  - Dir.glob('source/images/rotate/*').each do |img_file|
+    = image_tag "/images/rotate/#{File.basename(img_file)}"
