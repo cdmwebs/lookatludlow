@@ -1,5 +1,5 @@
 source :rubygems
 
 gem 'middleman'
-gem 'rdiscount'
-gem 'haml'
+gem 'ZURB-foundation'
+gem 'rb-fsevent'

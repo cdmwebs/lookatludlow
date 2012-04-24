@@ -1,6 +1,7 @@
 ### 
 # Compass
 ###
+require 'ZURB-foundation'
 
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
@@ -29,6 +30,7 @@
 ###
 # Page command
 ###
+set :mkd, layout_engine: :haml
 
 # Per-page layout changes:
 # 

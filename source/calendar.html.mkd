@@ -1,0 +1,7 @@
+## Community Calendar
+
+Here's a list of all the events and meetings happening in Ludlow.
+
+<iframe src="https://www.google.com/calendar/embed?title=Ludlow%20Events&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=g8nod2fr7734el5hqsikdtp984%40group.calendar.google.com&amp;color=%232F6309&amp;src=usa%40holiday.calendar.google.com&amp;color=%2328754E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<br />
